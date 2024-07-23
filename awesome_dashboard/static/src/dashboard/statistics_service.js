@@ -2,10 +2,12 @@
 
 import { registry } from "@web/core/registry";
 import { reactive } from "@odoo/owl";
+import { rpc } from "@web/core/network/rpc";
+
 
 const statisticsService = {
-    dependencies: ["rpc"],
-    start(env, { rpc }) {
+    dependencies: [],
+    start(env, { }) {
         const statistics = reactive({ isReady: false });
 
         async function loadData() {
